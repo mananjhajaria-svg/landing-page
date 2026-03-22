@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clear Acne in 7 Days - Professional Skincare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 25%, #f0e6f6 50%, #e6f2ff 75%, #f0e6f6 100%);
+      background-attachment: fixed;
+      color: #333;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 15px 40px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar h3 {
+      color: #764ba2;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 147, 251, 0.1));
+      border-radius: 20px;
+      padding: 50px 30px;
+      margin: 30px 0;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .hero .subtitle {
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      color: #764ba2;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      margin: 30px auto;
+      display: block;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border: 3px solid #667eea;
+    }
+
+    /* SECTION STYLING */
+    .section {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 30px;
+      margin: 30px 0;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    /* PRODUCT CARDS */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .product-card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #667eea;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    }
+
+    .product-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #764ba2;
+      margin-bottom: 15px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    /* STEPS STYLING */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .step {
+      background: linear-gradient(135deg, #667eea15, #764ba215);
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      border-left: 5px solid #667eea;
+    }
+
+    .step-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: #f093fb;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .step h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      color: #764ba2;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* BENEFITS */
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .benefit-item {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .benefit-item .emoji {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      margin: 15px 10px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #764ba2, #f093fb);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+    }
+
+    /* IMAGES */
+    img {
+      border-radius: 15px;
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border: 3px solid #667eea;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+      font-family: 'Raleway', sans-serif;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 50px 30px;
+      border-radius: 20px;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .cta-section h2 {
+      color: white;
+      -webkit-text-fill-color: white;
+    }
+
+    .cta-section p {
+      color: #f0f0f0;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .products-grid, .steps, .benefits-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <h3>✨ DailyFit </h3>
+</div>
+
+<div class="container">
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <h1>Clear Acne in 7 Days</h1>
+    <p class="subtitle">Transform Your Skin with Our Proven 3-Step Routine</p>
+    <img src="image1.jpg.avif" alt="Clear Skin" class="hero-image">
+  </div>
+
+  <!-- PROBLEM SECTION -->
+  <div class="section">
+    <h2>The Acne Problem</h2>
+    <p>Are you frustrated with acne, pimples, and dark spots? You're not alone! <strong style="color: #f093fb;">Millions struggle daily</strong> with persistent acne that refuses to go away.</p>
+    <p>Using random products will only make things worse. Most people follow the <span style="color: #667eea; font-weight: 600;">WRONG routine</span>, leading to more breakouts and scarring.</p>
+    
+    <div class="image-grid">
+      <img src="image2.jpg.avif" alt="Acne problem">
+      <img src="image3.jpg.avif" alt="Skincare">
+      <img src="image4.jpg.avif" alt="Facial treatment">
+    </div>
+  </div>
+
+  <!-- SOLUTION SECTION -->
+  <div class="section">
+    <h2>The 3-Step Solution</h2>
+    <p style="color: #764ba2; font-size: 18px; margin-bottom: 30px;"><strong>Follow this proven routine daily for clear, glowing skin:</strong></p>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Cleanse</h3>
+        <p>Start with a gentle, pH-balanced facewash. Clean your face twice daily to remove dirt, oil, and bacteria.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Treat</h3>
+        <p>Apply an anti-acne serum with proven ingredients like salicylic acid or niacinamide to target breakouts.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Protect</h3>
+        <p>Use a daily sunscreen (SPF 30+) to protect your healing skin and prevent post-acne pigmentation.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS SECTION -->
+  <div class="section">
+    <h2>Recommended Products</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Carefully selected products to fight acne effectively</p>
+
+    <div class="products-grid">
+      <div class="product-card">
+        <h3>🧴 Facewash</h3>
+        <p>Gentle cleanser that removes impurities without stripping your skin. Works for all skin types.</p>
+        <a class="btn" href="https://amzn.to/4lKbHJv" target="_blank">Buy on Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <h3>💊 Anti-Acne Serum</h3>
+        <p>Powerful formula with salicylic acid to reduce acne, pimples, and prevent future breakouts.</p>
+        <a class="btn" href="https://amzn.to/3Niulf5" target="_blank">Buy on Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <h3>☀️ Sunscreen</h3>
+        <p>Protection from UV damage. Prevents post-acne dark spots and keeps skin healthy and glowing.</p>
+        <a class="btn" href="https://amzn.to/47B68rl" target="_blank">Buy on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BENEFITS SECTION -->
+  <div class="section">
+    <h2>What You'll Get</h2>
+    <div class="benefits-list">
+      <div class="benefit-item">
+        <span class="emoji">✨</span>
+        Clear, Glowing Skin
+      </div>
+      <div class="benefit-item">
+        <span class="emoji">💪</span>
+        Boosted Confidence
+      </div>
+      <div class="benefit-item">
+        <span class="emoji">🎯</span>
+        Fewer Breakouts
+      </div>
+      <div class="benefit-item">
+        <span class="emoji">🌟</span>
+        Healthy Glow
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA SECTION -->
+  <div class="cta-section">
+    <h2>Ready for Clear Skin?</h2>
+    <p>Start your routine today and see results in 7 days!</p>
+    <a class="btn" href="https://amzn.to/4lIZMf7" target="_blank" style="background: white; color: #764ba2; margin-top: 20px;">Get Started Now</a>
+  </div>
+
+  <footer>
+    ⚖️ Results may vary depending on skin type. | Consult a dermatologist for severe acne | © 2024 DailyFit
+  </footer>
+
+</div>
+
+</body>
+</html>
