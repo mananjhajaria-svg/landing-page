@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Sunscreen - DailyFit Skincare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 25%, #f0e6f6 50%, #e6f2ff 75%, #f0e6f6 100%);
+      background-attachment: fixed;
+      color: #333;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 15px 40px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar h3 {
+      color: #764ba2;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 147, 251, 0.1));
+      border-radius: 20px;
+      padding: 50px 30px;
+      margin: 30px 0;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .hero .subtitle {
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      color: #764ba2;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 30px;
+      margin: 30px 0;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .product-card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #667eea;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #764ba2;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #764ba2, #f093fb);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+      font-family: 'Raleway', sans-serif;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <h3>✨ DailyFit </h3>
+</div>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>Shop Sunscreen</h1>
+    <p class="subtitle">Protect your skin from UV damage with our range of effective sunscreens</p>
+  </div>
+
+  <div class="section">
+    <h2>Our Sunscreen Collection</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="sunscreen1.png" alt="SPF 50 Sunscreen">
+        <h3>SPF 50 Daily Sunscreen</h3>
+        <p>Broad-spectrum protection for everyday use. Lightweight and non-greasy formula.</p>
+        <a class="btn" href="https://amzn.to/47krxol
+">Buy Now</a>
+      </div>
+
+      <div class="product-card">
+        <img src="sunscreen5.webp" alt="Tinted Sunscreen">
+        <h3>Tinted Mineral Sunscreen</h3>
+        <p>Provides natural-looking coverage while protecting against UV rays. Zinc oxide based.</p>
+        <a class="btn" href="https://amzn.to/4rPeHWz
+">Buy Now</a>
+      </div>
+
+      <div class="product-card">
+        <img src="sunscreen3.png" alt="Waterproof Sunscreen">
+        <h3>Water-Resistant Sunscreen</h3>
+        <p>Perfect for outdoor activities. Stays on even when sweating or swimming.</p>
+        <a class="btn" href="https://amzn.to/4rM0tpm">Buy Now</a>
+      </div>
+
+      <div class="product-card">
+        <img src="sunscreen4.webp" alt="Face Sunscreen">
+        <h3>Face-Specific Sunscreen</h3>
+        <p>Designed for facial skin. Absorbs quickly without leaving white residue.</p>
+        <a class="btn" href="https://amzn.to/3PAPhys">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin: 30px 0;">
+    <a class="btn" href="index.html">Back to Home</a>
+  </div>
+
+  <footer>
+    ⚖️ Results may vary depending on skin type. | Consult a dermatologist for severe acne | © 2024 DailyFit
+  </footer>
+
+</div>
+
+</body>
+</html>
